@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rlRobotsAppaires"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/dark_header"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tvRobotsAppaires"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="3dip"
+            android:paddingTop="2dp"
+            android:text="Périphériques appairés :"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/pbActivationBluetooth"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tvRobotsAppaires"
+            android:paddingRight="3dip"
+            android:paddingTop="3dip" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/devicespaired"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/pilotageRapide"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/dark_header"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/labelsearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="3dip"
+            android:paddingTop="2dip"
+            android:text="Périphériques à proximité :"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/labelsearch"
+            android:paddingRight="3dip"
+            android:paddingTop="3dip" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/devicesfound"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/stat_sys_data_bluetooth"
+        android:onClick="onBoutonRechercheClicked"
+        android:text="Rechercher des périphériques" />
+
+</LinearLayout>

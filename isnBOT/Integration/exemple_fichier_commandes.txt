@@ -1,0 +1,5 @@
+00 04 02 12 07 00 00 00 00 00 00 00 = Moteur C à 18%, retourne 02 04 00
+00 07 01 = Valeur du capteur sur le port 2
+00 07 03 = Valeur du capteur sur le port 4
+00 04 00 50 07 00 00 00 00 00 00 00 = Moteur A à 80%, retourne 02 04 00
+00 0B = Retourne le niveau de batterie du robot

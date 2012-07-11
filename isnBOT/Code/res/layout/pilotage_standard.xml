@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/pilotageRapide"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rlBtnLed"
+            android:background="@android:drawable/dark_header"
+            android:paddingLeft="3dip"
+            android:paddingTop="3dip"
+            android:text="LED capteur photosensible :"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/rlBtnLed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btnOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:drawableLeft="@drawable/off"
+                android:onClick="etteindre"
+                android:padding="3dp" />
+
+            <Button
+                android:id="@+id/btnBleu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/btnOff"
+                android:drawableLeft="@drawable/bleu"
+                android:onClick="allumerBleu"
+                android:padding="3dp" />
+
+            <Button
+                android:id="@+id/btnRouge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/btnBleu"
+                android:drawableLeft="@drawable/rouge"
+                android:onClick="allumerRouge"
+                android:padding="3dp" />
+
+            <Button
+                android:id="@+id/btnVert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/btnRouge"
+                android:drawableLeft="@drawable/vert"
+                android:onClick="allumerVert"
+                android:padding="3dp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/stop"
+            android:onClick="arreter"
+            android:padding="3dp" />
+
+        <Button
+            android:id="@+id/btnAvant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnStop"
+            android:layout_alignLeft="@+id/btnStop"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@drawable/haut"
+            android:onClick="avancer"
+            android:padding="3dp" />
+
+        <Button
+            android:id="@+id/btnGauche"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btnStop"
+            android:layout_toLeftOf="@+id/btnStop"
+            android:drawableLeft="@drawable/gauche"
+            android:onClick="tournerGauche"
+            android:padding="3dp" />
+
+        <Button
+            android:id="@+id/btnDroite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btnStop"
+            android:layout_toRightOf="@+id/btnStop"
+            android:drawableRight="@drawable/droite"
+            android:onClick="tournerDroite"
+            android:padding="3dp" />
+
+        <Button
+            android:id="@+id/btnAvantDroite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btnAvant"
+            android:layout_toRightOf="@+id/btnAvant"
+            android:drawableLeft="@drawable/haut_droite"
+            android:onClick="deriverDroite"
+            android:padding="3dp" />
+
+        <Button
+            android:id="@+id/btnAvantGauche"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btnAvant"
+            android:layout_toLeftOf="@+id/btnAvant"
+            android:drawableLeft="@drawable/haut_gauche"
+            android:onClick="deriverGauche"
+            android:padding="3dp" />
+
+        <Button
+            android:id="@+id/btnArriereGauche"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btnArriere"
+            android:layout_toLeftOf="@+id/btnArriere"
+            android:drawableLeft="@drawable/bas_gauche"
+            android:onClick="pivoterGauche"
+            android:padding="3dp" />
+
+        <Button
+            android:id="@+id/btnArriereDroite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btnArriere"
+            android:layout_toRightOf="@+id/btnArriere"
+            android:drawableLeft="@drawable/bas_droite"
+            android:onClick="pivoterDroite"
+            android:padding="3dp" />
+
+        <Button
+            android:id="@+id/btnArriere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btnStop"
+            android:layout_below="@+id/btnStop"
+            android:drawableLeft="@drawable/bas"
+            android:onClick="reculer"
+            android:padding="3dp" />
+
+        <SeekBar
+            android:id="@+id/sbPuisance"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnAvant"
+            android:layout_alignLeft="@+id/btnAvantGauche"
+            android:layout_alignRight="@+id/btnAvantDroite"
+            android:padding="3dp" />
+
+        <TextView
+            android:id="@+id/tvPuissance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sbPuisance"
+            android:layout_alignRight="@+id/sbPuisance"
+            android:text="Puissance : 50%"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- DEUXIEME ONGLET -->
+
+    <RelativeLayout
+        android:id="@+id/pilotageFin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rlA"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvPortA"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/dark_header"
+                android:paddingLeft="3dip"
+                android:paddingTop="3dip"
+                android:text="Port A : "
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnArriereA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPortA"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/bas"
+                android:onClick="reculerA"
+                android:padding="3dp" />
+
+            <Button
+                android:id="@+id/btnAvantA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPortA"
+                android:layout_toRightOf="@+id/btnArriereA"
+                android:drawableLeft="@drawable/haut"
+                android:onClick="avancerA"
+                android:padding="3dp" />
+
+            <Button
+                android:id="@+id/btnStopA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPortA"
+                android:layout_toLeftOf="@+id/btnArriereA"
+                android:drawableLeft="@drawable/stop"
+                android:onClick="arreterA"
+                android:padding="3dp" />
+
+            <TextView
+                android:id="@+id/tvPuissanceA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/sbPuisanceA"
+                android:layout_toRightOf="@+id/btnAvantA"
+                android:padding="3dp"
+                android:text="50%"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/sbPuisanceA"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btnStopA"
+                android:layout_alignRight="@+id/btnAvantA"
+                android:layout_below="@+id/btnStopA" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlA"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvPortB"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/dark_header"
+                android:paddingLeft="3dip"
+                android:paddingTop="3dip"
+                android:text="Port B : "
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnArriereB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPortB"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/bas"
+                android:onClick="reculerB"
+                android:padding="3dp" />
+
+            <Button
+                android:id="@+id/btnAvantB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPortB"
+                android:layout_toRightOf="@+id/btnArriereB"
+                android:drawableLeft="@drawable/haut"
+                android:onClick="avancerB"
+                android:padding="3dp" />
+
+            <Button
+                android:id="@+id/btnStopB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPortB"
+                android:layout_toLeftOf="@+id/btnArriereB"
+                android:drawableLeft="@drawable/stop"
+                android:onClick="arreterB"
+                android:padding="3dp" />
+
+            <TextView
+                android:id="@+id/tvPuissanceB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/sbPuisanceB"
+                android:layout_toRightOf="@+id/btnAvantB"
+                android:padding="3dp"
+                android:text="50%"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/sbPuisanceB"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btnStopB"
+                android:layout_alignRight="@+id/btnAvantB"
+                android:layout_below="@+id/btnStopB" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlB"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvPortC"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/dark_header"
+                android:paddingLeft="3dip"
+                android:paddingTop="3dip"
+                android:text="Port C : "
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnArriereC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPortC"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/bas"
+                android:onClick="reculerC"
+                android:padding="3dp" />
+
+            <Button
+                android:id="@+id/btnAvantC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPortC"
+                android:layout_toRightOf="@+id/btnArriereC"
+                android:drawableLeft="@drawable/haut"
+                android:onClick="avancerC"
+                android:padding="3dp" />
+
+            <Button
+                android:id="@+id/btnStopC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPortC"
+                android:layout_toLeftOf="@+id/btnArriereC"
+                android:drawableLeft="@drawable/stop"
+                android:onClick="arreterC"
+                android:padding="3dp" />
+
+            <TextView
+                android:id="@+id/tvPuissanceC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/sbPuisanceC"
+                android:layout_toRightOf="@+id/btnAvantC"
+                android:padding="3dp"
+                android:text="50%"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/sbPuisanceC"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btnStopC"
+                android:layout_alignRight="@+id/btnAvantC"
+                android:layout_below="@+id/btnStopC" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rlBtnLed2"
+            android:background="@android:drawable/dark_header"
+            android:paddingLeft="3dip"
+            android:paddingTop="3dip"
+            android:text="LED capteur photosensible :"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/rlBtnLed2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rlBtnLed2Center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlC"
+                android:layout_centerInParent="true"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/btnOff2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:drawableLeft="@drawable/off"
+                    android:onClick="etteindre"
+                    android:padding="3dp" />
+
+                <Button
+                    android:id="@+id/btnBleu2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/btnOff2"
+                    android:drawableLeft="@drawable/bleu"
+                    android:onClick="allumerBleu"
+                    android:padding="3dp" />
+
+                <Button
+                    android:id="@+id/btnRouge2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/btnBleu2"
+                    android:drawableLeft="@drawable/rouge"
+                    android:onClick="allumerRouge"
+                    android:padding="3dp" />
+
+                <Button
+                    android:id="@+id/btnVert2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/btnRouge2"
+                    android:drawableLeft="@drawable/vert"
+                    android:onClick="allumerVert"
+                    android:padding="3dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/options"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tvDroite"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/dark_header"
+            android:paddingLeft="3dip"
+            android:paddingTop="3dip"
+            android:text="Moteur Droite : "
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spDroite"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvGauche"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/dark_header"
+            android:paddingLeft="3dip"
+            android:paddingTop="3dip"
+            android:text="Moteur Gauche : "
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spGauche"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvLed"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/dark_header"
+            android:paddingLeft="3dip"
+            android:paddingTop="3dip"
+            android:text="Capteur photosensible : "
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spLed"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</FrameLayout>

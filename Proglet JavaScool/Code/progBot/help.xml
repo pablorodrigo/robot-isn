@@ -1,0 +1,70 @@
+<div title='La 	&#171;proglet&#187; progBot'>
+	<div>Cette proglet permet la gestion simplifi&#233;e des commandes de d&#233;placement ainsi que des diff&#233;rents capteurs. Ceci afin d'assimiler plus facilement le langage Java.
+	</div><br/>
+	<p>
+	Il est possible d'utiliser les principales fonctions de la librairie Lejos permettant la commande du robot NXT.   
+	</p>
+	<br/>
+ 
+	
+	<div>Pour pouvoir utiliser les fonctions permettant la gestion des <b>moteurs</b> il sera n&#233;cessaire au d&#233;but de votre code, au dessus du main() d'importer le fichier n&#233;cessaire, cela ce traduit par le morceau de code suivant :
+	</div><br/>
+	<div>
+		<div class="code">
+			<p><r>import lejos.nxt.Motor;</r></p>  
+		</div>
+	</div>
+	<br/>
+	<div>Pour pouvoir g&#233;rer le <b>capteur tactile</b> l'import sera : 
+	</div><br/>
+	<div>
+		<div class="code">
+			<p><r>import lejos.nxt.TouchSensor;</r></p>
+		</div>
+	</div><br/>
+	
+	<div>Pour programmer le <b>capteur ultrasonique</b> l'import 	&#224; effectuer sera :
+	</div><br/>
+	<div>
+		<div class="code">
+			<p><r>import lejos.nxt.UltrasonicSensor;</r></p>
+		</div>
+	</div><br/>
+
+	<div>Pour le <b>capteur photosensible</b> l'import n&#233;cessaire sera :
+	</div><br/>
+	<div>
+		<div class="code">
+			<p><r>import lejos.nxt.ColorSensor;</r></p>
+		</div>
+	</div><br/>
+	
+	
+	
+	<div>Pour pouvoir g&#233;rer l'affichage des informations sur <b>l'&#233;cran LCD</b> l'import sera : 
+	</div><br/>
+	<div>
+		<div class="code">
+			<p><r>import lejos.nxt.LCD;</r></p>
+		</div>
+	</div><br/>
+
+
+	<div>Afin d'envoyer votre programme dans le robot il sera n&#233;cessaire de placer au d&#233;but du main la fonction :
+	</div><br/>
+	<div>
+		<div class="code">
+			<p><r>upload();</r></p>
+		</div>
+	</div><br/>
+
+	<div>Pour pouvoir utiliser la librairie Lejos il est n&#233;cessaire de <b>flasher</b> le firmware Lego inclut de base dans le robot, afin de le remplacer par le firmware Lejos. Pour ceci, il suffit d'&#233;crire dans votre main la fonction :
+
+	</div><br/>
+	<div>
+		<div class="code">
+			<p><r>flasher();</r></p>
+		</div>
+	</div><br/>
+
+</div>

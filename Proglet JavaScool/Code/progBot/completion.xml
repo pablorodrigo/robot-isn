@@ -1,0 +1,9 @@
+<keywords>
+  <keyword 
+    name="getPane" 
+    title="Renvoie le panneau d'affichage de la proglet.">
+    <code>JLayeredPane pane = getPane();</code>
+    <doc>Renvoie le panneau d'affichage de la proglet </doc>
+  </keyword>
+  <!-- autres keyword -->
+</keywords>

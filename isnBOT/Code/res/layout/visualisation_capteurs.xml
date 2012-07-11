@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/llSensors"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:weightSum="4" >
+
+        <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/llPort1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tvNamePort1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/dark_header"
+                        android:paddingLeft="3dip"
+                        android:paddingTop="3dip"
+                        android:text="Port 1 : "
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/pbPort1"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvValue1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/llPort2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tvNamePort2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/dark_header"
+                        android:paddingLeft="3dip"
+                        android:paddingTop="3dip"
+                        android:text="Port 2 : "
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/pbPort2"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvValue2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/llPort3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tvNamePort3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/dark_header"
+                        android:paddingLeft="3dip"
+                        android:paddingTop="3dip"
+                        android:text="Port 3 : "
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/pbPort3"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvValue3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/llPort4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tvNamePort4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/dark_header"
+                        android:paddingLeft="3dip"
+                        android:paddingTop="3dip"
+                        android:text="Port 4 : "
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/pbPort4"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvValue4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/llMoteurA"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/dark_header"
+                        android:paddingLeft="3dip"
+                        android:paddingTop="3dip"
+                        android:text="Moteur A : "
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/pbMoteurA"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvValeurMoteurA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/llMoteurB"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/dark_header"
+                        android:paddingLeft="3dip"
+                        android:paddingTop="3dip"
+                        android:text="Moteur B : "
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/pbMoteurB"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvValeurMoteurB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/llMoteurC"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/dark_header"
+                        android:paddingLeft="3dip"
+                        android:paddingTop="3dip"
+                        android:text="Moteur C : "
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/pbMoteurC"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvValeurMoteurC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/llOptions"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/dark_header"
+                    android:paddingLeft="3dip"
+                    android:paddingTop="3dip"
+                    android:text="Port 1 : "
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spPort1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/dark_header"
+                    android:paddingLeft="3dip"
+                    android:paddingTop="3dip"
+                    android:text="Port 2 : "
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spPort2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/dark_header"
+                    android:paddingLeft="3dip"
+                    android:paddingTop="3dip"
+                    android:text="Port 3 : "
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spPort3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/dark_header"
+                    android:paddingLeft="3dip"
+                    android:paddingTop="3dip"
+                    android:text="Port 4 : "
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spPort4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+
+                
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/dark_header"
+                    android:paddingLeft="3dip"
+                    android:paddingTop="3dip"
+                    android:text="Moteur A : "
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spMoteurA"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/dark_header"
+                    android:paddingLeft="3dip"
+                    android:paddingTop="3dip"
+                    android:text="Moteur B : "
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spMoteurB"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/dark_header"
+                    android:paddingLeft="3dip"
+                    android:paddingTop="3dip"
+                    android:text="Moteur C : "
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spMoteurC"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+                
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/dark_header"
+                    android:paddingLeft="3dip"
+                    android:paddingTop="3dip"
+                    android:text="Fréquence de scrutation (en secondes) : "
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spRefresh"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</FrameLayout>

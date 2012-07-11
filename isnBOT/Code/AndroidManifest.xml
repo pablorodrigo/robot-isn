@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:installLocation="preferExternal"
+    package="isnbot.activities"
+    android:screenOrientation="portrait"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="isnBOT" >
+        <activity
+            android:name=".SelectionRobotActivity"
+            android:label="Sélection du robot"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".InformationsRobotActivity"
+            android:label="Informations sur le robot"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="isnbot.activities.PilotageStandardActivity"
+            android:label="tab"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name=".VisualisationCapteursActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="isnbot.activities.MenuActivity"
+            android:label="Menu principal"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="isnbot.activities.VocalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="isnbot.activities.MoveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="isnbot.activities.LCPActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="isnbot.activities.ExecutionFichierActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+    </application>
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+
+</manifest>

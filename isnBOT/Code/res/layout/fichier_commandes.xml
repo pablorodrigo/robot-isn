@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- Onglet du choix du fichier de commandes -->
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/llChoixFichier"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rlHeaderListeFichiersCommandes"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/dark_header"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tvHeaderFichiers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dip"
+                android:paddingTop="3dip"
+                android:text="Fichiers de commandes :"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/lvFichiersCommandes"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- Onglet d'envoi des commandes -->
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/llEnvoiCommandes"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rlHeaderListeFichiersCommandes"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/dark_header"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tvHeaderFichiers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dip"
+                android:paddingTop="3dip"
+                android:text="Commentaire :"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvCommentaire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="3dip"
+            android:paddingTop="3dip"
+            android:text="Commentaire de la commande"
+            android:textStyle="bold" />
+
+        <!-- Layout horizontal de la commande et la reponse -->
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/llCommandeEtReponse"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <!-- Layout vertical de la commande -->
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/llCommande"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/rlHeaderCommande"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/dark_header"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tvHeaderCommande"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="3dip"
+                        android:paddingTop="3dip"
+                        android:text="Commande :"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvCommande"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="3dip"
+                    android:paddingTop="3dip"
+                    android:text="Fichier de commandes non sélectionné..."
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Layout vertical de la reponse -->
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/llReponse"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/rlHeaderReponse"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/dark_header"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tvHeaderCommande"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="3dip"
+                        android:paddingTop="3dip"
+                        android:text="Réponse :"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvReponse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="3dip"
+                    android:paddingTop="3dip"
+                    android:text="Commande non envoyée..."
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout> <!-- Layout horizontal commande et reponse -->
+
+
+        <!-- Layout contenant les boutons -->
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@null"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnArretUrgence"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:drawableLeft="@drawable/stop"
+                    android:onClick="onArretUrgenceClicked"
+                    android:padding="5dp"
+                    android:text="" />
+
+                <Button
+                    android:id="@+id/btnEnvoyerCommande"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/haut"
+                    android:onClick="onEnvoyerCommandeClicked"
+                    android:padding="5dp"
+                    android:text="Envoyer la commande" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnCommandePrecedente"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/gauche"
+                    android:onClick="onCommandePrecedenteClicked"
+                    android:padding="5dp"
+                    android:text="Commande précedente" />
+
+                <Button
+                    android:id="@+id/btnCommandeSuivante"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/droite"
+                    android:onClick="onCommandeSuivanteClicked"
+                    android:padding="5dp"
+                    android:text="Commande suivante" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
